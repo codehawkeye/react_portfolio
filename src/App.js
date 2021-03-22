@@ -7,6 +7,8 @@ import Footer from './components/Footer/Footer'
 import Portfolio from './components/pages/Portfolio/Portfolio'
 import Resume from './components/pages/Resume/Resume'
 
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
 import './App.css';
 
 
@@ -18,9 +20,17 @@ const App = () => {
                  <Profile />
                   </Grid>
                  <Grid item xs style={{ backgroundColor: 'blue' }}>
-                   <Header />
-                <Portfolio />
-                <Resume />
+                    <Header />
+                    <Router>
+                        <Switch>
+                            <Route path="./portfolio">
+                                <Portfolio />
+                            </Route>
+                            <Route path="/">
+                                <Resume />
+                                </Route>
+                            </Switch>
+                    </Router>
                 <Footer/>
                 </Grid>               
             </Grid>        
