@@ -16,17 +16,17 @@ const App = () => {
     return (
         <Container>
             <Grid container>
-                <Grid item xs={12} sm={12} md={4} lg={3} style={{backgroundColor: 'red'}}>
+                <Grid item xs={12} sm={12} md={4} lg={3}>
                  <Profile />
                   </Grid>
                  <Grid item xs style={{ backgroundColor: 'blue' }}>
                     <Header />
                     <Router>
                         <Switch>
-                            <Route path="./portfolio">
+                            <Route path='./portfolio'>
                                 <Portfolio />
                             </Route>
-                            <Route path="/">
+                            <Route path='/'>
                                 <Resume />
                                 </Route>
                             </Switch>
